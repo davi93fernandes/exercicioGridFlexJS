@@ -3,7 +3,7 @@
 }
 
 body {
-
+    width: 100%;
     background: #FCE6A8;
     margin: 0;
     height: 100vh;
@@ -19,7 +19,7 @@ body {
 }
 
 header {
-
+    width: 100%;
     grid-area: cabecalhoPrincipal;
     display: flex;
 }
@@ -31,7 +31,7 @@ h1 {
 }
 
 .cabecalhoSecundario {
-
+    width: 100%;
     grid-area: cabecalhoSecundario;
     display: flex;
     text-align: center;
@@ -55,7 +55,7 @@ a {
 
 main {
 
-
+    width: 100%;
     grid-area: principal;
     display: flex;
     flex-direction: column;
@@ -67,6 +67,7 @@ main {
 }
 
 aside {
+    width: 100%;
     background: #d2e4e1;
     grid-area: aolado;
     display: flex;
@@ -115,7 +116,7 @@ footer {
     gap: 15px;
     height: 380px;
     background-color: #e3e8ed;
-
+    min-width: 200px;
 }
 
 
@@ -126,11 +127,13 @@ h3 {
 .input1 {
     grid-area: nome;
     height: 50px;
+    width: 100%;
 }
 
 .input2 {
     grid-area: sobrenome;
     height: 50px;
+    width: 100%;
 }
 
 .input3 {
@@ -146,6 +149,7 @@ h3 {
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
+    width: 100%;
 }
 
 .botao_enviar {
@@ -178,4 +182,53 @@ h3 {
     align-items: center;
     cursor: pointer;
     width: 100%
+}
+
+@media only screen and (max-width: 640px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "cabecalhoPrincipal cabecalhoPrincipal "
+            "cabecalhoSecundario cabecalhoSecundario"
+            "aolado aolado"
+            "principal principal"
+            "rodape rodape"
+        ;
+       
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+    header {
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+}
+
+@media only screen and (max-width: 640px) {
+
+    .div_formulario {
+        
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "nome"
+            "sobrenome"
+            "email"
+            "mensagem"
+            "enviar"
+            "msgSucesso"
+        ;
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+    }
+
 }
