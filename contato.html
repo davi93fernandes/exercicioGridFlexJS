@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contato.css">
+    <script src="script_contato.js"></script>
     <title>Contato</title>
 </head>
 
@@ -28,8 +29,10 @@
             <input class="input2" placeholder="Sobrenome" type="text" name="" id="sobrenome">
             <input class="input3" placeholder="E-mail" type="text" name="" id="email">
             <textarea class="input4" placeholder="Mensagem" name="" id="mensagem" cols="30" rows="10"></textarea>
-            <button class="botao_enviar" id="botaoEnviar">Enviar</button>
+            <button onclick="enviarFormulario()" class="botao_enviar" id="botaoEnviar">Enviar</button>
+            <div class="msgSucesso" id="msgSucesso">Sucesso</div>
         </div>
+        
     </main>
     <aside>
         <div class="foto">foto</div>
@@ -37,9 +40,7 @@
         <a href="">Linkedin</a>
         <a href="">GitHub</a>
     </aside>
-    <div class="divFooter">
-
-    </div>
+    
     <footer>
         <spam>Criado por:</spam>
         <h3>Davi Fernandes</h3>
